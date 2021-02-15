@@ -18,3 +18,7 @@ This project is written to find duplicate files on a given directory. This purpo
 
 - By this commit, the current directory is set for `~` (`home` in unix operating systems). It can be manually changed on `lib/duper/application.ex`
 - A amount of 25 workers is set on `lib/duper/application.ex`.
+
+---
+
+- This project is written based on Programming Elixir >= 1.6 book by Dave Thomas through Pragprog
