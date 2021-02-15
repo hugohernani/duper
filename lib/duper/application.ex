@@ -9,7 +9,7 @@ defmodule Duper.Application do
   def start(_type, _args) do
     children = [
       Duper.Results,
-      {Duper.PathFinder, "."},
+      {Duper.PathFinder, "~"},
       Duper.WorkerSupervisor,
       {Duper.Gatherer, 25}
     ]
