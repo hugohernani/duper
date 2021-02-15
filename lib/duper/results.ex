@@ -5,7 +5,7 @@ defmodule Duper.Results do
   # API
 
   def start_link(_) do
-    GenServer.start_link(__MODULE__, [], name: @me)
+    GenServer.start_link(__MODULE__, :no_args, name: @me)
   end
 
   def add_hash_for(path, hash) do
