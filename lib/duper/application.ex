@@ -9,9 +9,9 @@ defmodule Duper.Application do
   def start(_type, _args) do
     children = [
       Duper.Results,
-      {Duper.PathFinder, "/home/hugohernani/Pictures/ML"},
+      {Duper.PathFinder, "."},
       Duper.WorkerSupervisor,
-      {Duper.Gatherer, 1}
+      {Duper.Gatherer, 25}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
