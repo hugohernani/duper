@@ -16,7 +16,7 @@ defmodule Duper.PathFinder do
   # SERVER
 
   def init(path) do
-    DiwWalker.start_link(path)
+    DirWalker.start_link(path)
   end
 
   def handle_call(:next_path, _from, dir_walker) do
