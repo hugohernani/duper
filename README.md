@@ -6,7 +6,7 @@ This project is written to find duplicate files on a given directory. This purpo
 - PathFinder -> It runs based on DirWalker hex package to traverse file in the set directory
 - Gatherer -> It kicksoff the amount of workers (managed by a proper OTP Supervisor) according to a given number and presents (calling Results server) the list of duplicated results once all workers have finished their jobs
 - WorkerSupervisor -> It's a DynamicSupervisor to handle creation of a GenServer server (Worker) by a request
-- Worker -> it properly check a file content by opening a stream and hashing (md5) its content to be used as a comparisson mechanism. It uses event message (or callbacks) to let Gatherer server know that it is available to receive next file to do its job. Next file is retrieved by asking PathFinder
+- Worker -> it properly checks a file content by opening a stream and hashing (md5) its content to be used as a comparisson value to the content of other files. It uses event message (or callbacks) to let Gatherer server know that it is available to receive and work on next file. **Next file** is retrieved by asking PathFinder.
 
 
 ## Running
